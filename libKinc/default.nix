@@ -46,10 +46,25 @@ in
       make -C build/Release/
     '';
 
+    # Tidy up with pushd popd
     installPhase = ''
       mkdir -p $out/lib $out/include
       cp build/Release/Kinc.so $out/lib/libKinc.so
       cd Sources/
+      find . -name "*.h" -print0 | cpio -pdm0 $out/include
+      cd ../Backends/System/Linux/Sources/
+      find . -name "*.h" -print0 | cpio -pdm0 $out/include
+      cd ../../POSIX/Sources/
+      find . -name "*.h" -print0 | cpio -pdm0 $out/include
+    '' + lib.strings.optionalString (graphics-api == "opengl") ''
+      cd ../../../Graphics4/OpenGL/Sources/
+      find . -name "*.h" -print0 | cpio -pdm0 $out/include
+      cd ../../../Graphics5/G5onG4/Sources/
+      find . -name "*.h" -print0 | cpio -pdm0 $out/include
+    '' + lib.strings.optionalString (graphics-api == "vulkan") ''
+      cd ../../../Graphics5/Vulkan/Sources/
+      find . -name "*.h" -print0 | cpio -pdm0 $out/include
+      cd ../../../Graphics4/G4onG5/Sources/
       find . -name "*.h" -print0 | cpio -pdm0 $out/include
     '';
 

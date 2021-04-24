@@ -7,11 +7,12 @@
 #    devshell.url = "github:numtide/devshell/master";
 
     kinc-src = { url = "github:Kode/Kinc"; flake = false; };
+    kinc-shader-src = { url = "github:Kinc-Samples/Shader-Kinc"; flake = false; };
   };
 
-  outputs = { self, nixpkgs, flake-utils, kinc-src }:
+  outputs = { self, nixpkgs, flake-utils, kinc-src, kinc-shader-src }:
     {
-      overlay = import ./overlay.nix { inherit kinc-src; };
+      overlay = import ./overlay.nix { inherit kinc-src kinc-shader-src; };
     }
     //
     (
