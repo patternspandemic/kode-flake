@@ -69,7 +69,7 @@ in
     '';
 
     meta = with stdenv.lib; {
-      description = "Shared library for Kode's Kinc framework";
+      description = "Shared library for Kode's Kinc framework.";
       homepage = https://github.com/Kode/Kinc;
       downloadPage = https://github.com/Kode/Kinc;
       license = licenses.zlib;

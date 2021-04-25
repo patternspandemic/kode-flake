@@ -2,11 +2,11 @@
   "nodes": {
     "flake-utils": {
       "locked": {
-        "lastModified": 1618868421,
-        "narHash": "sha256-vyoJhLV6cJ8/tWz+l9HZLIkb9Rd9esE7p+0RL6zDR6Y=",
+        "lastModified": 1619345332,
+        "narHash": "sha256-qHnQkEp1uklKTpx3MvKtY6xzgcqXDsz5nLilbbuL+3A=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "eed214942bcfb3a8cc09eb3b28ca7d7221e44a94",
+        "rev": "2ebf2558e5bf978c7fb8ea927dfaed8fefab2e28",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     "kinc-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1619272950,
-        "narHash": "sha256-qHyFFhqqciAkbRgpr+DE/C4dr/bZBboUTWcwCEdoPt8=",
+        "lastModified": 1619358274,
+        "narHash": "sha256-gsMoVtaLEqwrwVvTauclmdWfrCSxfkcLfShacVidBcQ=",
         "owner": "Kode",
         "repo": "Kinc",
-        "rev": "0d25c11db65ecdb45bf77a12de9dfef8bd2b6aad",
+        "rev": "a8879841059a3005930676b241ee4cd38438567a",
         "type": "github"
       },
       "original": {
@@ -47,13 +47,29 @@
         "type": "github"
       }
     },
+    "kinc-texture-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1607535639,
+        "narHash": "sha256-o6O4W1Oj7/gS5Zls6Qr/+UkD9EFt5vBOP7up+paDwbI=",
+        "owner": "Kinc-Samples",
+        "repo": "Texture-Kinc",
+        "rev": "25670ea5ed3df28591a0128f9220a56ecf959583",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Kinc-Samples",
+        "repo": "Texture-Kinc",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1619211752,
-        "narHash": "sha256-NhokZCyPP7TfEI6C7qDJoI4ytdrAwYFPjFpJJ0ym/Ps=",
+        "lastModified": 1619260288,
+        "narHash": "sha256-uzuiQcnOtHGqUxJcHesG/JHK46fKcuS5hZ6VyCbBJaM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "63adedf6319bc1f9d9e94cc1cfe95c3dae19f7e0",
+        "rev": "00f9323c2717e4b2ed0b3c38c107a75de4198562",
         "type": "github"
       },
       "original": {
@@ -68,6 +84,7 @@
         "flake-utils": "flake-utils",
         "kinc-shader-src": "kinc-shader-src",
         "kinc-src": "kinc-src",
+        "kinc-texture-src": "kinc-texture-src",
         "nixpkgs": "nixpkgs"
       }
     }

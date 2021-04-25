@@ -50,5 +50,6 @@ in
       downloadPage = https://github.com/Kode/Kinc;
       license = licenses.zlib;
       maintainers = [ maintainers.patternspandemic ];
+      platforms = [ "x86_64-linux" ];
     };
   }
