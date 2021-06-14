@@ -1,8 +1,18 @@
+# Kode additions:
+# - krafix
+# - kraffiti
+# - kmake
+# - Kha
+# - KodeStudio
+# - Krom ?
+
+# Move samples to separate flake.
+
 {
   description = "Kode Frameworks and Tools";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-20.09";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
     flake-utils.url = "github:numtide/flake-utils";
 #    devshell.url = "github:numtide/devshell/master";
 

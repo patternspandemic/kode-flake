@@ -1,4 +1,4 @@
-{ stdenv, kinc-src }:
+{ stdenv, lib, kinc-src }:
 let
   flake_input_fixed = builtins.fetchGit {
       url = "https://github.com/Kode/Kinc.git";
@@ -15,7 +15,7 @@ in
       cp -r ./* $out
     '';
 
-    postFixup = stdenv.lib.optionalString (stdenv.system == "i686-linux" || stdenv.system == "x86_64-linux") ''
+    postFixup = lib.optionalString (stdenv.system == "i686-linux" || stdenv.system == "x86_64-linux") ''
       # Patch Binaries
       # TODO: Do 32bit bins need specific 32bit libs/interpreter?
       # TODO: Do *-linuxarm binaries need patching as well? How?
@@ -44,7 +44,7 @@ in
 #      substituteInPlace $out/Tools/kincmake/node_modules/fs-extra/lib/copy/copy-file-sync.js --replace "stat.mode" "33188"
     '';
 
-    meta = with stdenv.lib; {
+    meta = with lib; {
       description = "Modern low level game library and hardware abstraction.";
       homepage = https://kode.tech/;
       downloadPage = https://github.com/Kode/Kinc;
