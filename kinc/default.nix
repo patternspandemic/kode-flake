@@ -13,9 +13,7 @@ in
     installPhase = ''
       mkdir -p $out
       cp -r ./* $out
-# FIXME: graphics2 removal temporary
-      rm $out/Sources/kinc/graphics2/*
-    '';
+   '';
 
     postFixup = lib.optionalString (stdenv.system == "i686-linux" || stdenv.system == "x86_64-linux") ''
       # Patch Binaries

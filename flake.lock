@@ -34,11 +34,11 @@
     "kinc-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1626450969,
-        "narHash": "sha256-22Um3FJvTfsk7PWxd9+X1pPfRNtI48c9CvI/476H+sM=",
+        "lastModified": 1626789227,
+        "narHash": "sha256-cclIVMR59qJ6hG2rWEbBTM0Z5GyG9YtWI+ZfS1gViGc=",
         "owner": "Kode",
         "repo": "Kinc",
-        "rev": "ccc2ae2a8f6aae0481c68ed5d107fbe89c678a38",
+        "rev": "2cdac22d353bebffc0292d30e57c166d3697194d",
         "type": "github"
       },
       "original": {
