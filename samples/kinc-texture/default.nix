@@ -32,7 +32,7 @@ stdenv.mkDerivation {
     makeWrapper $out/bin/.kinc-texture-wrapped $out/bin/kinc-texture --run "cd $out/bin"
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Texture-Kinc sample application modified to utilize libKinc.";
     homepage = https://github.com/Kinc-Samples/Texture-Kinc;
     downloadPage = https://github.com/Kinc-Samples/Texture-Kinc;

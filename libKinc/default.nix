@@ -46,7 +46,7 @@ in
       make -C build/Release/
     '';
 
-    # Tidy up with pushd popd
+    # TODO: Tidy up with pushd popd
     installPhase = ''
       mkdir -p $out/lib $out/include
       cp build/Release/Kinc.so $out/lib/libKinc.so
@@ -68,7 +68,7 @@ in
       find . -name "*.h" -print0 | cpio -pdm0 $out/include
     '';
 
-    meta = with stdenv.lib; {
+    meta = with lib; {
       description = "Shared library for Kode's Kinc framework.";
       homepage = https://github.com/Kode/Kinc;
       downloadPage = https://github.com/Kode/Kinc;
