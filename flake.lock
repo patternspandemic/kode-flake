@@ -63,6 +63,22 @@
         "type": "github"
       }
     },
+    "krafix-bin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1634430621,
+        "narHash": "sha256-dJrfvnaO5EO25/kcWSZK4LPKmyULmNRIr9Vbz2sv+dU=",
+        "owner": "Kode",
+        "repo": "krafix_bin",
+        "rev": "41bbbc71cf45f26d5b3dec112f4871b16a2e669b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Kode",
+        "repo": "krafix_bin",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1631993469,
@@ -85,6 +101,7 @@
         "kinc-shader-src": "kinc-shader-src",
         "kinc-src": "kinc-src",
         "kinc-texture-src": "kinc-texture-src",
+        "krafix-bin": "krafix-bin",
         "nixpkgs": "nixpkgs"
       }
     }

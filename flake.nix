@@ -17,13 +17,14 @@
 #    devshell.url = "github:numtide/devshell/master";
 
     kinc-src = { url = "github:Kode/Kinc"; flake = false; };
+    krafix-bin = { url = "github:Kode/krafix_bin"; flake = false; };
     kinc-shader-src = { url = "github:Kinc-Samples/Shader-Kinc"; flake = false; };
     kinc-texture-src = { url = "github:Kinc-Samples/Texture-Kinc"; flake = false; };
   };
 
-  outputs = { self, nixpkgs, flake-utils, kinc-src, kinc-shader-src, kinc-texture-src }:
+  outputs = { self, nixpkgs, flake-utils, kinc-src, krafix-bin, kinc-shader-src, kinc-texture-src }:
     {
-      overlay = import ./overlay.nix { inherit kinc-src kinc-shader-src kinc-texture-src; };
+      overlay = import ./overlay.nix { inherit kinc-src krafix-bin kinc-shader-src kinc-texture-src; };
     }
     //
     (
@@ -47,9 +48,11 @@
           packages = flake-utils.lib.flattenTree pkgs.kode;
 
           # apps.x86_64-linux = {
+          #   krafix = { type = "app"; program = "${self.packages.x86_64-linux.krafix}/bin/krafix"; };
           #   kinc-shader = { type = "app"; program = "${self.packages.x86_64-linux.kinc-shader}/bin/kinc-shader"; };
           #   kinc-texture = { type = "app"; program = "${self.packages.x86_64-linux.kinc-texture}/bin/kinc-texture"; };
           # };
+          apps.krafix = flake-utils.lib.mkApp { drv = packages.krafix; };
           apps.kinc-shader = flake-utils.lib.mkApp { drv = packages.kinc-shader; };
           apps.kinc-texture = flake-utils.lib.mkApp { drv = packages.kinc-texture; };
 
