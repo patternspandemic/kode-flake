@@ -12,7 +12,7 @@
   description = "Kode Frameworks and Tools";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.11";
     flake-utils.url = "github:numtide/flake-utils";
 #    devshell.url = "github:numtide/devshell/master";
 
